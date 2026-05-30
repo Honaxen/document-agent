@@ -49,18 +49,48 @@ document-agent/
 ├── Dockerfile
 └── README.md
 ```
+---
 
+## Getting Started
+
+```bash
+pip install -r requirements.txt
+```
+
+Run CLI:
+```bash
+cd agent
+python3 main.py --document ../data/your_document.pdf
+```
+
+Run API:
+```bash
+uvicorn api.main:app --reload
+```
+
+Run tests:
+```bash
+pytest tests/test_agent.py -v
+```
 ---
 
 ## Stack
 
-Python · Claude API · FAISS · sentence-transformers · FastAPI
+Python · Ollama · FAISS · sentence-transformers · FastAPI
 
 ---
 
 ## What I Learned
 
-TBD — will be updated after completion.
+Building an agent is different from building a model.
+A model predicts. An agent reasons, retrieves, and responds.
+
+Conversation history changes everything.
+Without it, every question is isolated.
+With it, the agent can answer follow-up questions coherently.
+
+Local models (Ollama) are viable for development and prototyping.
+For production, a hosted API gives better reliability and speed.
 
 ---
 
