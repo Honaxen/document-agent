@@ -1,7 +1,7 @@
 # Document Agent
 
-An AI agent that answers questions about documents using Claude API and RAG.
-Upload a document, ask anything — the agent retrieves and reasons.
+A conversational AI agent that answers questions from any document.
+Upload a PDF or text file — ask anything — the agent retrieves and reasons.
 
 ---
 
@@ -10,8 +10,9 @@ Upload a document, ask anything — the agent retrieves and reasons.
 - Ingests PDF and text documents
 - Chunks and embeds content into a vector store
 - Retrieves relevant chunks for any query
-- Uses Claude API to generate grounded answers
+- Generates grounded answers using a local LLM (Ollama)
 - Maintains conversation context across multiple questions
+- Web UI via Gradio — no coding required
 
 ---
 
@@ -27,7 +28,7 @@ Ingestion (chunk + embed)
 Vector Store (FAISS)
    |
    v
-Query -> Retrieve -> Claude API -> Answer
+Query -> Retrieve -> Ollama (gemma3:12b) -> Answer
 ```
 
 ---
@@ -37,18 +38,21 @@ Query -> Retrieve -> Claude API -> Answer
 ```
 document-agent/
 ├── agent/
-│   ├── main.py
-│   ├── ingestion.py
-│   ├── retrieval.py
-│   └── generation.py
+│   ├── main.py          — CLI interface
+│   ├── ingestion.py     — PDF/TXT loading and chunking
+│   ├── retrieval.py     — FAISS vector store
+│   └── generation.py    — conversational agent with history
 ├── api/
-│   └── main.py
+│   └── main.py          — FastAPI REST API
 ├── tests/
+│   └── test_agent.py    — 6/6 passing
+├── app.py               — Gradio web UI
 ├── data/
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
 ```
+
 ---
 
 ## Getting Started
@@ -57,26 +61,38 @@ document-agent/
 pip install -r requirements.txt
 ```
 
-Run CLI:
+Make sure Ollama is running:
+```bash
+ollama serve
+```
+
+### Run Web UI (Gradio)
+```bash
+python3 app.py
+```
+Then open http://localhost:7860
+
+### Run CLI
 ```bash
 cd agent
 python3 main.py --document ../data/your_document.pdf
 ```
 
-Run API:
+### Run API
 ```bash
 uvicorn api.main:app --reload
 ```
 
-Run tests:
+### Run Tests
 ```bash
 pytest tests/test_agent.py -v
 ```
+
 ---
 
 ## Stack
 
-Python · Ollama · FAISS · sentence-transformers · FastAPI
+Python · Ollama · FAISS · sentence-transformers · FastAPI · Gradio
 
 ---
 
