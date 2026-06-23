@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the main topic of this document?",
+    "ground_truth": ""
+  },
+  {
+    "question": "What are the key points mentioned in the document?",
+    "ground_truth": ""
+  },
+  {
+    "question": "What conclusions does the document draw?",
+    "ground_truth": ""
+  }
+]
