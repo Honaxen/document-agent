@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-06-23T14:54:33.943173",
+  "aggregate": {
+    "faithfulness": 1.0,
+    "relevance": 0.2989,
+    "completeness": 1.0,
+    "precision": 0.166,
+    "overall": 0.6162,
+    "n_samples": 3
+  },
+  "samples": [
+    {
+      "id": "q1",
+      "question": "What is the main topic of this document?",
+      "answer": "The main topic of this document is the comparison of SAE clusters and human-annotated topic metadata on Deep-Math.",
+      "overall": 0.6368,
+      "scores": {
+        "faithfulness": 1.0,
+        "relevance": 0.3889,
+        "completeness": 1.0,
+        "precision": 0.1581
+      },
+      "details": {
+        "faithfulness": {
+          "supported": 1,
+          "total": 1,
+          "unsupported": []
+        },
+        "relevance": {
+          "chunk_scores": [
+            0.3333,
+            0.5,
+            0.3333
+          ],
+          "irrelevant_chunks": []
+        },
+        "completeness": {
+          "covered": 0,
+          "total": 0,
+          "missing_terms": []
+        },
+        "precision": {
+          "chunk_scores": [
+            0.1364,
+            0.1071,
+            0.2308
+          ],
+          "noisy_chunks": []
+        }
+      }
+    },
+    {
+      "id": "q2",
+      "question": "What are the key points mentioned in the document?",
+      "answer": "Here's a summary of the key points mentioned in the document:\n\n*   **Data engineering is crucial:** Its effectiveness depends heavily on data engineering choices like sample selection, sorting, and batching strategies, which significantly impact training efficiency and performance.\n*   **SAERL is a research framework:** It's intended for post-training data engineering tasks such as curriculum construction, batch organization, data filtering, and interpretability analysis.\n*   **Reproducibility:** The released artifacts will be documented to support reproducibility, including details on the data-processing pipeline, SAE feature extraction, curriculum construction, data filtering, and evaluation setup.\n*   **Limitations:** The document mentions limitations of external signals.\n\n\n\n",
+      "overall": 0.6403,
+      "scores": {
+        "faithfulness": 1.0,
+        "relevance": 0.2857,
+        "completeness": 1.0,
+        "precision": 0.2755
+      },
+      "details": {
+        "faithfulness": {
+          "supported": 4,
+          "total": 4,
+          "unsupported": []
+        },
+        "relevance": {
+          "chunk_scores": [
+            0.4286,
+            0.0,
+            0.4286
+          ],
+          "irrelevant_chunks": [
+            1
+          ]
+        },
+        "completeness": {
+          "covered": 0,
+          "total": 0,
+          "missing_terms": []
+        },
+        "precision": {
+          "chunk_scores": [
+            0.3654,
+            0.0714,
+            0.3896
+          ],
+          "noisy_chunks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "q3",
+      "question": "What conclusions does the document draw?",
+      "answer": "The document concludes that direct top- 50k selection by the probe score further improves the DEEPMATH purity to 99.92%.",
+      "overall": 0.5716,
+      "scores": {
+        "faithfulness": 1.0,
+        "relevance": 0.2222,
+        "completeness": 1.0,
+        "precision": 0.0643
+      },
+      "details": {
+        "faithfulness": {
+          "supported": 1,
+          "total": 1,
+          "unsupported": []
+        },
+        "relevance": {
+          "chunk_scores": [
+            0.3333,
+            0.0,
+            0.3333
+          ],
+          "irrelevant_chunks": [
+            1
+          ]
+        },
+        "completeness": {
+          "covered": 0,
+          "total": 0,
+          "missing_terms": []
+        },
+        "precision": {
+          "chunk_scores": [
+            0.1579,
+            0.0,
+            0.0351
+          ],
+          "noisy_chunks": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ]
+}

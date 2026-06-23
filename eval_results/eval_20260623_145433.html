@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>RAG Evaluation Report</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, sans-serif; padding: 2rem; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .meta { font-size: 12px; color: #7d8590; margin-bottom: 2rem; }
+  .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 2rem; }
+  .card { background: #161b22; border: 0.5px solid #30363d; border-radius: 8px; padding: 14px; text-align: center; }
+  .card-label { font-size: 11px; color: #7d8590; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+  .card-score { font-size: 28px; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; border: 0.5px solid #30363d; border-radius: 8px; overflow: hidden; font-family: monospace; }
+  th { background: #21262d; padding: 10px 12px; font-size: 11px; color: #7d8590; text-align: left; letter-spacing: 0.5px; }
+  td { padding: 10px 12px; border-top: 0.5px solid #21262d; vertical-align: middle; }
+  tr:hover td { background: #1c2128; }
+</style>
+</head>
+<body>
+<h1>RAG Evaluation Report</h1>
+<p class="meta">Generated: 2026-06-23 14:54 &nbsp;·&nbsp; 3 samples evaluated</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="card-label">Faithfulness</div>
+    <div class="card-score" style="color:#3fb950;">1.00</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Relevance</div>
+    <div class="card-score" style="color:#f85149;">0.30</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Completeness</div>
+    <div class="card-score" style="color:#3fb950;">1.00</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Precision</div>
+    <div class="card-score" style="color:#f85149;">0.17</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Overall</div>
+    <div class="card-score" style="color:#f0883e;">0.62</div>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>Faithfulness</th>
+      <th>Relevance</th>
+      <th>Completeness</th>
+      <th>Precision</th>
+      <th>Overall</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        <tr>
+          <td style="color:#7d8590;font-size:12px;">q1</td>
+          <td style="color:#cdd9e5;font-size:12px;">What is the main topic of this document?</td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:31px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.39</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:12px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.16</span></td>
+          <td style="text-align:center;font-weight:bold;color:#f0883e;">0.64</td>
+        </tr>
+        <tr>
+          <td style="color:#7d8590;font-size:12px;">q2</td>
+          <td style="color:#cdd9e5;font-size:12px;">What are the key points mentioned in the document?</td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:22px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.29</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:22px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.28</span></td>
+          <td style="text-align:center;font-weight:bold;color:#f0883e;">0.64</td>
+        </tr>
+        <tr>
+          <td style="color:#7d8590;font-size:12px;">q3</td>
+          <td style="color:#cdd9e5;font-size:12px;">What conclusions does the document draw?</td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:17px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.22</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#3fb950;width:80px;height:12px;border-radius:4px;"></div></div> <span style="color:#3fb950;font-size:11px;margin-left:4px;">1.00</span></td>
+          <td style="text-align:center;"><div style="background:#21262d;border-radius:4px;width:80px;height:12px;display:inline-block;"><div style="background:#f85149;width:5px;height:12px;border-radius:4px;"></div></div> <span style="color:#f85149;font-size:11px;margin-left:4px;">0.06</span></td>
+          <td style="text-align:center;font-weight:bold;color:#f0883e;">0.57</td>
+        </tr>
+  </tbody>
+</table>
+</body>
+</html>
